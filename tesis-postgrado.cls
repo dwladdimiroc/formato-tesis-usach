@@ -437,7 +437,7 @@
 {
 \vspace*{-1.0cm}
 \begin{picture}(18,4)(0,40)
-	\put(340,-7){\includegraphics[scale=.25]{./images/LogoUsach2.png}}
+	\put(340,-7){\includegraphics[scale=.25]{./images/LogoUsach.png}}
 \end{picture}
 
 \sloppy
