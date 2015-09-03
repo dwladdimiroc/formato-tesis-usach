@@ -1,0 +1,65 @@
+\documentclass[dosguias]{tesis-postgrado}
+% Opciones: dosguias, propuesta
+
+\begin{document}
+\baselineskip 23pt
+\frontmatter								% Utiliza numeración romana
+
+% ### Cubierta de la tesis ###
+\thispagestyle{empty}
+\include{preliminares/cubierta}
+
+% ### Páginas preliminares de la tesis ###
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}		% Hace que no aparezca la línea horizontal superior al principio de estas páginas
+\fancyhead[L]{}
+\fancyhead[C]{}
+\fancyhead[R]{}
+
+\makecopyright							% Si es propuesta no se mostrará
+% ### Dedicatoria y agredecimientos de la tesis ###
+\include{preliminares/dedicatoria}		% En caso de no querer agregarlos, comente esta línea
+\include{preliminares/agradecimiento}
+
+\pagestyle{fancy}
+
+% ### Índices ###
+\tableofcontents							%% Tabla de contenido
+
+\listoftables							%% Indice de tablas
+\addcontentsline{toc}{chapter}{Índice de tablas} % Comando para agregar el índice a la Tabla de Contenido
+
+\listoffigures							%% Indice de figuras
+\addcontentsline{toc}{chapter}{Índice de ilustraciones} % Comando para agregar el índice a la Tabla de Contenido
+
+\listofalgorithms						%% Indice de algoritmos
+\addcontentsline{toc}{chapter}{Índice de algoritmos} % Comando para agregar el índice a la Tabla de Contenido
+
+\include{preliminares/abstract}
+
+% ### Cuerpo de la tesis ###
+\mainmatter								% Reinicia el contador de páginas para partir de 1 y usando números arábicos.
+
+% ### Configuración del header ###
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0.4pt}		%Hace que vuelva a aparecer la linea horizontal
+\fancyhead[LE,RO]{\slshape \leftmark}	%Hace que se muestre el título del capítulo en las páginas que no son la primera de cada capítulo
+
+% ### Capítulos de la tesis ###
+\include{chapters/1-Introduccion}
+\include{chapters/2-Cuerpo}
+\include{chapters/3-Conclusiones}
+
+% ### Bibliografía de la tesis ###
+\bibliographystyle{apa-good}
+\bibliography{bibliografia}
+\addcontentsline{toc}{chapter}{Bibliografía} % Comando para agregar el índice a la Tabla de Contenido
+
+% ### Optativo: Anexos de la tesis ###
+\appendix
+\addappheadtotoc							% Agregar Apéndice al índice. En caso de no poseer anexos, comentar
+% ### Anexos ###
+\include{anexos/Anexo-1}
+
+\end{document}
+%\\end

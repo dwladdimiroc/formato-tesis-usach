@@ -1,0 +1,14 @@
+% Numeración romana en minúscula
+\makeatletter
+  \def\@roman#1{\romannumeral #1}
+\makeatother
+
+% Referenciar algoritmo y figura
+\makeatletter
+  \let\l@algorithm\l@figure
+\makeatother
+
+% Agregar Algoritmo al Índice de Algoritmos
+\makeatletter
+	\renewcommand*{\l@algocf}[2]{\@dottedtocline{1}{1em}{2.3em}{Algoritmo #1}{#2}}
+\makeatother
