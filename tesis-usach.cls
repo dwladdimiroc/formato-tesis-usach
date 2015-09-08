@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{tesis-postgrado}[2015/08/31 Template Thesis USACH]
+\ProvidesClass{tesis-usach}[2015/08/31 Template Thesis USACH]
 
 % Agradecimiento a todos los que ayudaron a realizar este template versión estandarizada de la Universidad de Santiago de Chile, entre ellos Emir Muñoz, Rodrigo Campos, Hugo Meneses, Víctor Flores, Pablo González y Daniel Wladdimiro :)
 
