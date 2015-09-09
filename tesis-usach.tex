@@ -16,7 +16,9 @@
 \fancyhead[C]{}
 \fancyhead[R]{}
 
+{\setstretch{1.0}						% Interlineado en las páginas preliminares
 \makecopyright							% Si es propuesta no se mostrará
+
 % ### Dedicatoria y agredecimientos de la tesis ###
 \include{preliminares/dedicatoria}		% En caso de no querer agregarlos, comente esta línea
 \include{preliminares/agradecimiento}
@@ -36,6 +38,7 @@
 \addcontentsline{toc}{chapter}{Índice de algoritmos} % Comando para agregar el índice a la Tabla de Contenido
 
 \include{preliminares/abstract}
+} % end \setstretch{1.0}
 
 % ### Cuerpo de la tesis ###
 \mainmatter								% Reinicia el contador de páginas para partir de 1 y usando números arábicos.
@@ -51,6 +54,7 @@
 \include{chapters/3-Conclusiones}
 
 % ### Bibliografía de la tesis ###
+{\setstretch{1.0}						% Interlineado en las páginas finales
 \bibliographystyle{apa-good}
 \bibliography{bibliografia}
 \addcontentsline{toc}{chapter}{Bibliografía} % Comando para agregar el índice a la Tabla de Contenido
@@ -60,6 +64,7 @@
 \addappheadtotoc							% Agregar Apéndice al índice. En caso de no poseer anexos, comentar
 % ### Anexos ###
 \include{anexos/Anexo-1}
+} % end \setstretch{1.0}
 
 \end{document}
 %\\end
