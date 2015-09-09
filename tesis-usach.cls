@@ -479,11 +479,10 @@
 \else	% Si se trata del documento final
     \vspace*{4cm}
     {\@titleMay\par}
-    \vspace{1cm}
         \begin{center}
-			\vspace*{2cm}
+			\vspace*{2.5cm}
 			{\bf \normalsize \@autor}\\[1cm]
-			\vspace*{3cm}
+			\vspace*{2.5cm}
 			\begin{flushleft}
 				{\normalsize \hspace{7cm} Profesor guía: \@profesorguia}\\
 				\ifdosguias
@@ -497,7 +496,7 @@
 				\end{tabular}
 				}
 			\end{flushleft}
-			\vspace*{1.5cm}
+			\vspace*{1cm}
 			\null
 			\vfill
 			{\normalsize \@ciudad\ -- \@pais\\
