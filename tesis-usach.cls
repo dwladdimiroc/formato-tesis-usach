@@ -392,8 +392,8 @@
 \def\facultad#1{\gdef\@facultad{#1}}
 \def\departamento#1{\gdef\@departamento{#1}}
 \def\grado#1{\gdef\@grado{#1}}
-\def\titulo#1{\gdef\@title{\begin{center}{\LARGE\bf#1}%
-\end{center}}\gdef\@titleMay{\begin{center}{\fontsize{12}{18} \selectfont \bf#1}%
+\def\titulo#1{\gdef\@title{\begin{center}{\large\bf#1}%
+\end{center}}\gdef\@titleMay{\begin{center}{\large\bf#1}%
 \end{center}}}
 \def\autor#1{\gdef\@autor{{\bfseries #1}}\gdef\@autorn{#1}}
 \def\fecha#1#2#3#4{\gdef\@diasemana{#1}\gdef\@diaexamen{#2}\gdef\@mesexamen{#3}%
@@ -445,19 +445,15 @@
 \vspace*{-1.5cm}
 
 \begin{center}
-    {\bf \fontsize{14}{21}\selectfont UNIVERSIDAD DE SANTIAGO DE CHILE}\\
-    {\bf \fontsize{12}{18}\selectfont FACULTAD DE \MakeUppercase{\@facultad}}\\
-    {\bf \fontsize{12}{18}\selectfont Departamento de \@departamento}\\
+    {\bf \Large UNIVERSIDAD DE SANTIAGO DE CHILE}\\
+    {\bf \large FACULTAD DE \MakeUppercase{\@facultad}}\\
+    {\bf \large Departamento de \@departamento}\\
 \end{center}
 
 \ifpropuesta		% Si se trata de la propuesta
     \vspace*{5cm}
-    \@titleMay\par
-    \vspace{1cm}
-    \begin{center}
-    \large
-    \end{center}
-    \vspace{2.5cm}
+    {\@titleMay\par}
+    \vspace{3.5cm}
     \begin{flushright}
         \begin{tabular}[t]{l l}
             Nombre: & \@autor \\
@@ -482,35 +478,31 @@
     \end{center}
 \else	% Si se trata del documento final
     \vspace*{4cm}
-    \@titleMay\par
+    {\@titleMay\par}
     \vspace{1cm}
-    \large
         \begin{center}
-        \vspace*{2cm}
-		{\bf \fontsize{10}{12} \selectfont{\@autor}}\\[1cm]
-
-        \vspace*{3cm}
-        \begin{flushleft}
-        \normalsize
-        \hspace{7cm} Profesor guía: \fontsize{10}{12} \selectfont {\@profesorguia}\\
-        \ifdosguias
-            \hspace{7cm} Profesora co-guía: \fontsize{10}{12} \selectfont{\@profesorcoguia}\\
-        \fi
-        \vspace{1cm}
-        \hspace{6.8cm}
-		\begin{tabular}{p{5.5cm}}
-			Tesis de grado presentada en conformidad a los requisitos \mbox{para obtener el grado de} \@grado
-		\end{tabular}
-        \end{flushleft}
-
-        %\vspace*{3.5cm}
-        \null
-	\vfill
-        \fontsize{10}{12} \selectfont{\@ciudad\ -- \@pais}\\
-        \@annoexamen
-        \end{center}\par
-	\vspace{.9cm}
-    
+			\vspace*{2cm}
+			{\bf \normalsize \@autor}\\[1cm]
+			\vspace*{3cm}
+			\begin{flushleft}
+				{\normalsize \hspace{7cm} Profesor guía: \@profesorguia}\\
+				\ifdosguias
+				{\normalsize \hspace{7cm} Profesora co-guía: \@profesorcoguia}\\
+				\fi
+				\vspace{1cm}
+				\hspace{6.8cm}
+				{\normalsize
+				\begin{tabular}{p{5.5cm}}
+					Tesis de grado presentada en conformidad a los requisitos \mbox{para obtener el grado de} \@grado
+				\end{tabular}
+				}
+			\end{flushleft}
+			\vspace*{1.5cm}
+			\null
+			\vfill
+			{\normalsize \@ciudad\ -- \@pais\\
+			\@annoexamen}
+        \end{center}\par    
 \fi
 } % End \makecubierta
 
