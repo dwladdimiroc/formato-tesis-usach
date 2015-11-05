@@ -4,12 +4,8 @@
 % Agradecimiento a todos los que ayudaron a realizar este template versión estandarizada de la Universidad de Santiago de Chile, entre ellos Emir Muñoz, Rodrigo Campos, Hugo Meneses, Víctor Flores, Pablo González y Daniel Wladdimiro :)
 
 \newif\ifkeys\keysfalse
-\newif\iftxfonts\txfontsfalse
-\newif\ifdosguias\dosguiasfalse
 \newif\ifpropuesta\propuestafalse
 \DeclareOption{keys}{\keystrue}
-\DeclareOption{txfonts}{\txfontstrue}
-\DeclareOption{dosguias}{\dosguiastrue}
 \DeclareOption{propuesta}{\propuestatrue}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions\relax
@@ -50,7 +46,6 @@
 \RequirePackage{units}
 \RequirePackage{upgreek}
 
-\iftxfonts\RequirePackage{txfonts}\fi
 
 % Entornos y figuras
 \RequirePackage{verbatim}
@@ -464,13 +459,7 @@
             A\~no Ingreso: & \@annoingreso \\
             Teléfono: & \@telefono \\
             E-mail: & \@email \\
-            \ifdosguias Profesores: \else Profesor: \fi &
-            \ifdosguias
-                {\normalfont \@profesorguia} \\ 
-                & {\normalfont \@profesorcoguia} \\
-            \else
-                \@profesorguia \\
-            \fi
+            Profesor: & \@profesorguia \\ 
         \end{tabular}
     \end{flushright}
     \begin{center}
@@ -486,9 +475,6 @@
 			\vspace*{2.5cm}
 			\begin{flushleft}
 				{\normalsize \hspace{7cm} Profesor guía: \@profesorguia}\\
-				\ifdosguias
-				{\normalsize \hspace{7cm} Profesora co-guía: \@profesorcoguia}\\
-				\fi
 				\vspace{1cm}
 				\hspace{6.8cm}
 				{\normalsize
