@@ -93,6 +93,7 @@
 \renewcommand{\algorithmicrequire}{\textbf{Entrada:}}
 \renewcommand{\algorithmicensure}{\textbf{Salida:}}
 \renewcommand{\algorithmiccomment}[1]{//#1}
+\RequirePackage{etoolbox}										% Interlineado
 
 % Enumeración de cada figura y algoritmo
 \RequirePackage{tesis-enumeracion}
