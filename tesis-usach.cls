@@ -10,11 +10,7 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions\relax
 
-<<<<<<< HEAD
 % Letra tamaño 10pt, hoja carta
-=======
-% Letra tamaño 10pt, hoja carta y formato de dos planas
->>>>>>> dcedf8b01dc4093687a359f9caf79fe022940841
 \LoadClass[10pt,oneside,letterpaper]{book}
 
 % Letra Arial
