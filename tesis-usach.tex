@@ -23,19 +23,12 @@
 \include{preliminares/dedicatoria}		% En caso de no querer agregarlos, comente esta línea
 \include{preliminares/agradecimiento}
 
-\pagestyle{fancy}
-
 % ### Índices ###
 \tableofcontents							%% Tabla de contenido
 
 \listoftables							%% Indice de tablas
-\addcontentsline{toc}{chapter}{Índice de tablas} % Comando para agregar el índice a la Tabla de Contenido
-
 \listoffigures							%% Indice de figuras
-\addcontentsline{toc}{chapter}{Índice de ilustraciones} % Comando para agregar el índice a la Tabla de Contenido
-
 \listofalgorithms						%% Indice de algoritmos
-\addcontentsline{toc}{chapter}{Índice de algoritmos} % Comando para agregar el índice a la Tabla de Contenido
 \AtBeginEnvironment{algorithmic}{\setstretch{1.5}} % Interlineado de los algoritmos
 
 \include{preliminares/abstract}
@@ -43,11 +36,6 @@
 
 % ### Cuerpo de la tesis ###
 \mainmatter								% Reinicia el contador de páginas para partir de 1 y usando números arábicos.
-
-% ### Configuración del header ###
-\pagestyle{fancy}
-\renewcommand{\headrulewidth}{0.4pt}		%Hace que vuelva a aparecer la linea horizontal
-\fancyhead[LE,RO]{\slshape \leftmark}	%Hace que se muestre el título del capítulo en las páginas que no son la primera de cada capítulo
 
 % ### Capítulos de la tesis ###
 \include{chapters/1-Introduccion}
@@ -58,7 +46,7 @@
 {\setstretch{1.0}						% Interlineado en las páginas finales
 \bibliographystyle{apa-good}
 \bibliography{bibliografia}
-\addcontentsline{toc}{chapter}{Bibliografía} % Comando para agregar el índice a la Tabla de Contenido
+\addcontentsline{toc}{chapter}{Referencias bibliográficas} % Comando para agregar el índice a la Tabla de Contenido
 
 % ### Optativo: Anexos de la tesis ###
 \appendix
@@ -68,4 +56,4 @@
 } % end \setstretch{1.0}
 
 \end{document}
-%\\end
+% end

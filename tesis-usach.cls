@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{tesis-usach}[2015/08/31 Template Thesis USACH]
+\ProvidesClass{tesis-usach}[2015/12/30 Template Thesis USACH]
 
 % Agradecimiento a todos los que ayudaron a realizar este template versión estandarizada de la Universidad de Santiago de Chile, entre ellos Emir Muñoz, Rodrigo Campos, Hugo Meneses, Víctor Flores, Pablo González y Daniel Wladdimiro :)
 
@@ -10,8 +10,8 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions\relax
 
-% Letra tamaño 10pt, hoja carta y formato de dos planas
-\LoadClass[10pt,twoside,letterpaper]{book}
+% Letra tamaño 10pt, hoja carta
+\LoadClass[10pt,oneside,letterpaper]{book}
 
 % Letra Arial
 \renewcommand{\rmdefault}{phv}
@@ -45,6 +45,7 @@
 \RequirePackage{textcomp}
 \RequirePackage{units}
 \RequirePackage{upgreek}
+\RequirePackage{soulutf8}				% Resaltar en amarillo un texto
 
 
 % Entornos y figuras
@@ -248,16 +249,17 @@
 \newcommand{\pathexp}[2]{\ensuremath{#1}\textlbrackdbl\ensuremath{{#2}}\textrbrackdbl}
 
 % Definición del estilo del header y footer
-\lhead{\chaptername \thechapter. \chaptermark}
+%\lhead{\chaptername \thechapter. \chaptermark}
+\lhead{}
 \chead{}
-    \fancyfoot[LE,RO]{\thepage}
+    \fancyfoot[R]{\thepage}
 \cfoot{}
 
 %Hace que la primera página de cada capítulo no tenga el header por defecto y que en el footer el N° de página no esté al centro
 \fancypagestyle{plain}{
     \fancyhf{}	% Clear all header and footer fields
-	\fancyfoot[LE,RO]{\thepage}
-    \renewcommand{\headrulewidth}{0pt}
+	\fancyfoot[R]{\thepage}
+    %\renewcommand{\headrulewidth}{0pt}
     \renewcommand{\footrulewidth}{0pt}
 }
 
@@ -266,7 +268,7 @@
 %\decimalpoint
 
 % Headings
-\markboth{}{}
+%\markboth{}{}
 
 % Renombre de los títulos por defecto
 \renewcommand\captionsspanish{}
@@ -276,7 +278,7 @@
 \renewcommand{\listfigurename}{\centerline{Índice de ilustraciones}}
 \renewcommand{\listalgorithmcfname}{\centerline{Índice de algoritmos}}
 
-\renewcommand{\bibname}{Bibliografía}
+\renewcommand{\bibname}{Referencias bibliográficas}
 
 \renewcommand{\appendixname}{Anexo}
 \renewcommand{\appendixtocname}{Anexos}
@@ -335,7 +337,6 @@
 % Espacio entre los números y el caption de la Tabla
 \setlength{\cfttabnumwidth}{2em}
 
-
 % Margenes según el reglamento en tamaño carta
 \RequirePackage[headheight=14pt, letterpaper]{geometry}
 \geometry{top=2.5cm, bottom=2.5cm, left=4cm, right=2.5cm}
@@ -350,9 +351,6 @@
 % Evitar que corte las palabras al final
 \setlength{\pretolerance}{2000}
 \setlength{\tolerance}{3000}
-
-% Página en blanco
-\newcommand{\paginaenblanco}{\newpage{\pagestyle{empty}\cleardoublepage\null}}
 
 % Referenciacion en la forma: 1-5
 \newcommand{\lref}[2]{\ref{#1}--\ref{#2}}
@@ -431,9 +429,11 @@
 % Cubierta
 \newcommand{\makecubierta}
 {
+\newgeometry{top=4cm, bottom=2.5cm, left=4cm, right=2.5cm}
+
 \vspace*{-1.0cm}
 \begin{picture}(18,4)(0,40)
-	\put(340,-7){\includegraphics[scale=.25]{./images/LogoUsach.png}}
+	\put(300,0){\includegraphics[scale=.25]{./images/LogoUsach.png}}
 \end{picture}
 
 \sloppy
@@ -475,6 +475,7 @@
 			\vspace*{2.5cm}
 			\begin{flushleft}
 				{\normalsize \hspace{7cm} Profesor guía: \@profesorguia}\\
+				{\normalsize \hspace{7cm} Profesor co-guía: \@profesorcoguia}\\
 				\vspace{1cm}
 				\hspace{6.8cm}
 				{\normalsize
@@ -490,6 +491,7 @@
 			\@annoexamen}
         \end{center}\par    
 \fi
+\restoregeometry
 } % End \makecubierta
 
 
@@ -536,8 +538,7 @@
 \newcommand{\resumenCastellano}[1]
 {
     \chapter*{\centerline{Resumen}}
-    \addcontentsline{toc}{chapter}{Resumen}
-#1
+	#1
 }
 
 % Abstract
@@ -549,8 +550,7 @@
 \newcommand{\resumenIngles}[1]
 {
     \chapter*{\centerline{Abstract}}
-    \addcontentsline{toc}{chapter}{Abstract}
-#1
+    #1
 }
 
 % Glosario
@@ -563,4 +563,4 @@
 
 \endinput
 
-% #### End file 'tesis-postgrado.cls' ####
+% #### End file 'tesis-usach.cls' ####
