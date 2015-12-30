@@ -19,12 +19,12 @@
 {\setstretch{1.0}						% Interlineado en las páginas preliminares
 \makecopyright							% Si es propuesta no se mostrará
 
-\setcounter{page}{1} 
-\include{preliminares/abstract}
-
 % ### Dedicatoria y agredecimientos de la tesis ###
 \include{preliminares/dedicatoria}		% En caso de no querer agregarlos, comente esta línea
 \include{preliminares/agradecimiento}
+
+\setcounter{page}{1} 
+\include{preliminares/abstract}
 
 % ### Índices ###
 \tableofcontents							%% Tabla de contenido
@@ -47,7 +47,7 @@
 {\setstretch{1.0}						% Interlineado en las páginas finales
 \bibliographystyle{apa-good}
 \bibliography{bibliografia}
-\addcontentsline{toc}{chapter}{Referencias bibliográficas} % Comando para agregar el índice a la Tabla de Contenido
+\addcontentsline{toc}{chapter}{Referencias bibliogr\'aficas} % Comando para agregar el índice a la Tabla de Contenido
 
 % ### Optativo: Anexos de la tesis ###
 \appendix

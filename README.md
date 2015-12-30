@@ -9,3 +9,5 @@ El proyecto contiene los siguientes archivos:
 * tesis-enumeracion.sty: Archivo para la enumeración de la tesis
 * tesis-postgrado.cls: Estilo modificado de book.cls, el cual posee el formato de tesis según lo indicado por el manual de tesis Usach 2014
 * tesis-postgrado.tex: Archivo principal, en el cual deben agregarse las distintas partes de la tesis
+
+Nota: Para la compilación del archivo se debe utilizar Xelatex.
