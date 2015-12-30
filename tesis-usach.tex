@@ -19,6 +19,9 @@
 {\setstretch{1.0}						% Interlineado en las páginas preliminares
 \makecopyright							% Si es propuesta no se mostrará
 
+\setcounter{page}{1} 
+\include{preliminares/abstract}
+
 % ### Dedicatoria y agredecimientos de la tesis ###
 \include{preliminares/dedicatoria}		% En caso de no querer agregarlos, comente esta línea
 \include{preliminares/agradecimiento}
@@ -30,8 +33,6 @@
 \listoffigures							%% Indice de figuras
 \listofalgorithms						%% Indice de algoritmos
 \AtBeginEnvironment{algorithmic}{\setstretch{1.5}} % Interlineado de los algoritmos
-
-\include{preliminares/abstract}
 } % end \setstretch{1.0}
 
 % ### Cuerpo de la tesis ###
