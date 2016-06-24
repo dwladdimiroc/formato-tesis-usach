@@ -1,7 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{tesis-usach}[2015/12/30 Template Thesis USACH]
 
-% Agradecimiento a todos los que ayudaron a realizar este template versión estandarizada de la Universidad de Santiago de Chile, entre ellos Emir Muñoz, Rodrigo Campos, Hugo Meneses, Víctor Flores, Pablo González y Daniel Wladdimiro :)
+% Agradecimiento a todos los que ayudaron a realizar este template versión estandarizada de la Universidad de Santiago de Chile, entre ellos Emir Muñoz, Rodrigo Campos, Hugo Meneses, Víctor Flores, Miguel Cárcamo, Pablo González y Daniel Wladdimiro :)
 
 \newif\ifkeys\keysfalse
 \newif\ifpropuesta\propuestafalse
@@ -16,6 +16,11 @@
 % Letra Arial
 \usepackage{fontspec}
 \setmainfont{Arial}
+
+% Letra Arial ShareLatex
+%\usepackage[T1]{fontenc}
+%\usepackage{helvet}
+%\renewcommand{\familydefault}{\sfdefault}
 
 % Interlineado de 1.5:
 \renewcommand{\baselinestretch}{1.5}

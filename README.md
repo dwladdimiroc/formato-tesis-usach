@@ -11,3 +11,5 @@ El proyecto contiene los siguientes archivos:
 * tesis-postgrado.tex: Archivo principal, en el cual deben agregarse las distintas partes de la tesis
 
 Nota: Para la compilación del archivo se debe utilizar Xelatex.
+
+En caso de usar el editor online ShareLaTeX se debe comentar las líneas 17 y 18 del archivo `tesis-usach.cls` y descomentar las líneas 21, 22 y 23.
