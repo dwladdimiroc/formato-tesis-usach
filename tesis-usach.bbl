@@ -1,4 +1,4 @@
-\begin{thebibliography}{2}
+\begin{thebibliography}{3}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 \expandafter\ifx\csname url\endcsname\relax
   \def\url#1{{\tt #1}}\fi
@@ -9,9 +9,18 @@ Codish, M., Marriott, K., \& Taboch, C. (2000).
 \newblock Improving program analyses by structure untupling.
 \newblock {\em Journal of Logic Programming\/}, {\em 43\/}, 251--263.
 
-\bibitem[{Samza(2014)}]{samza}
-Samza, A. (2014).
-\newblock Samza.
-\newblock [Online] \url{http://samza.incubator.apache.org/}.
+\bibitem[{Delgado(2016)}]{delgado2016exposicion}
+Delgado, F. (2016).
+\newblock \textit{Piñera es el presidenciable con más exposición en la
+  prensa según investigación Usach }.
+\newblock Recuperado el Martes 29 de Julio de 2016, de
+  \url{http://www.biobiochile.cl/noticias/nacional/politica/2016/06/20/pinera-es-el-presidenciable-con-mas-exposicion-en-la-prensa-segun-investigacion}
+  \url{-usach.shtml}.
+
+\bibitem[{M{\'{e}}riaudeau \& Saeed(2015)}]{MeriaudeauS15}
+M{\'{e}}riaudeau, F., \& Saeed, A.~M. (2015).
+\newblock Special section guest editorial: Special section on quality control
+  by artificial vision: Nonconventional imaging systems.
+\newblock {\em J. Electronic Imaging\/}, {\em 24\/}(6), 061101.
 
 \end{thebibliography}

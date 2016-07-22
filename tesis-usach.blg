@@ -1,54 +1,48 @@
-This is BibTeX, Version 0.99d (TeX Live 2015/dev/Debian)
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: tesis-usach.aux
 A level-1 auxiliary file: preliminares/cubierta.aux
-A level-1 auxiliary file: preliminares/dedicatoria.aux
-A level-1 auxiliary file: preliminares/agradecimiento.aux
 A level-1 auxiliary file: preliminares/abstract.aux
-A level-1 auxiliary file: chapters/1-Introduccion.aux
-A level-1 auxiliary file: chapters/2-Cuerpo.aux
-A level-1 auxiliary file: chapters/3-Conclusiones.aux
 The style file: apa-good.bst
-A level-1 auxiliary file: anexos/Anexo-1.aux
 Database file #1: bibliografia.bib
-You've used 2 entries,
+You've used 3 entries,
             2804 wiz_defined-function locations,
-            604 strings with 5072 characters,
-and the built_in function-call counts, 1004 in all, are:
-= -- 84
-> -- 37
-< -- 1
-+ -- 14
-- -- 12
-* -- 71
-:= -- 171
-add.period$ -- 6
-call.type$ -- 2
-change.case$ -- 14
-chr.to.int$ -- 2
-cite$ -- 2
-duplicate$ -- 69
-empty$ -- 71
-format.name$ -- 16
-if$ -- 187
+            606 strings with 5413 characters,
+and the built_in function-call counts, 1573 in all, are:
+= -- 130
+> -- 56
+< -- 2
++ -- 21
+- -- 18
+* -- 116
+:= -- 257
+add.period$ -- 9
+call.type$ -- 3
+change.case$ -- 21
+chr.to.int$ -- 3
+cite$ -- 3
+duplicate$ -- 113
+empty$ -- 116
+format.name$ -- 27
+if$ -- 298
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 14
-newline$ -- 17
-num.names$ -- 8
-pop$ -- 26
+missing$ -- 23
+newline$ -- 22
+num.names$ -- 12
+pop$ -- 41
 preamble$ -- 1
-purify$ -- 12
+purify$ -- 18
 quote$ -- 0
-skip$ -- 28
+skip$ -- 43
 stack$ -- 0
-substring$ -- 47
-swap$ -- 33
+substring$ -- 76
+swap$ -- 59
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 18
+type$ -- 27
 warning$ -- 0
-while$ -- 8
+while$ -- 12
 width$ -- 0
-write$ -- 31
+write$ -- 44

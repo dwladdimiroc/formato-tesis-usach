@@ -19,19 +19,20 @@
 {\setstretch{1.0}						% Interlineado en las páginas preliminares
 \makecopyright							% Si es propuesta no se mostrará
 
-% ### Dedicatoria y agredecimientos de la tesis ###
-\include{preliminares/dedicatoria}		% En caso de no querer agregarlos, comente esta línea
-\include{preliminares/agradecimiento}
-
-\setcounter{page}{1} 
+% ### Resumen de la tesis
+\setcounter{page}{0} 
 \include{preliminares/abstract}
+
+% ### Dedicatoria y agredecimientos de la tesis ###
+\input{preliminares/dedicatoria}		% En caso de no querer agregarlos, comente esta línea
+\input{preliminares/agradecimiento}
 
 % ### Índices ###
 \tableofcontents							%% Tabla de contenido
 
 \listoftables							%% Indice de tablas
 \listoffigures							%% Indice de figuras
-\listofalgorithms						%% Indice de algoritmos
+\listofalgorithms						%% Indice de algoritmos (Optativo: En caso de poseer algoritmos)
 \AtBeginEnvironment{algorithmic}{\setstretch{1.5}} % Interlineado de los algoritmos
 } % end \setstretch{1.0}
 
@@ -39,21 +40,37 @@
 \mainmatter								% Reinicia el contador de páginas para partir de 1 y usando números arábicos.
 
 % ### Capítulos de la tesis ###
-\include{chapters/1-Introduccion}
-\include{chapters/2-Cuerpo}
-\include{chapters/3-Conclusiones}
+\input{chapters/1-Introduccion}
+\input{chapters/2-Cuerpo}
+\input{chapters/3-Conclusiones}
+
+{\setstretch{1.0}						% Interlineado en las páginas finales
+% ### Optativo: Glosario ###
+\clearpage
+\addcontentsline{toc}{chapter}{Glosario}
+\input{finales/Glosario}
 
 % ### Bibliografía de la tesis ###
-{\setstretch{1.0}						% Interlineado en las páginas finales
+\clearpage
+\addcontentsline{toc}{chapter}{Referencias bibliogr\'aficas} % Comando para agregar el índice a la Tabla de
 \bibliographystyle{apa-good}
 \bibliography{bibliografia}
-\addcontentsline{toc}{chapter}{Referencias bibliogr\'aficas} % Comando para agregar el índice a la Tabla de Contenido
 
 % ### Optativo: Anexos de la tesis ###
-\appendix
-\addappheadtotoc							% Agregar Apéndice al índice. En caso de no poseer anexos, comentar
+\clearpage
+\anexo
+\addcontentsline{toc}{chapter}{Anexos}
+
+\input{finales/Anexo-1}
 % ### Anexos ###
-\include{anexos/Anexo-1}
+
+% ### Optativo: Apéndices de la tesis ###
+\clearpage
+\apendice
+\addcontentsline{toc}{chapter}{Apéndices}
+
+% ### Apéndices ###
+\input{finales/Apendice-1}
 } % end \setstretch{1.0}
 
 \end{document}

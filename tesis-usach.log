@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013/Debian) (format=xelatex 2015.8.17)  30 DEC 2015 13:38
+This is XeTeX, Version 3.1415926-2.5-0.9999.3 (TeX Live 2013/Debian) (format=xelatex 2015.8.17)  22 JUL 2016 12:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1014,12 +1014,7 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
-Package: appendix 2009/09/02 v1.2b extra appendix facilities
-\c@@pps=\count179
-\c@@ppsavesec=\count180
-\c@@ppsaveapp=\count181
-)
+(./tesis-finales.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/tocbibind/tocbibind.sty
 Package: tocbibind 2010/10/13 v1.5k extra ToC listings
 Package tocbibind Info: The document has chapter divisions on input line 50.
@@ -1031,7 +1026,7 @@ Package tocbibind Note: Using chapter style headings, unless overridden.
 Invalid UTF-8 byte or sequence at line 164 replaced by U+FFFD.
 Invalid UTF-8 byte or sequence at line 414 replaced by U+FFFD.
 Package: algorithm2e 2013/01/06 v5.00 algorithms environments
-\c@AlgoLine=\count182
+\c@AlgoLine=\count179
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2009/10/20 v1.13 Space after command names (DPC,MH)
@@ -1074,44 +1069,44 @@ subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 \algoheightrule=\skip133
 \algotitleheightruledefault=\skip134
 \algotitleheightrule=\skip135
-\c@algocfline=\count183
-\c@algocfproc=\count184
-\c@algocf=\count185
+\c@algocfline=\count180
+\c@algocfproc=\count181
+\c@algocf=\count182
 \algocf@algoframe=\box61
 \algocf@algobox=\box62
 ) (/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithmic.sty
 Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
 Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
-\c@ALC@unique=\count186
-\c@ALC@line=\count187
-\c@ALC@rem=\count188
-\c@ALC@depth=\count189
+\c@ALC@unique=\count183
+\c@ALC@line=\count184
+\c@ALC@rem=\count185
+\c@ALC@depth=\count186
 \ALC@tlm=\skip136
 \algorithmicindent=\skip137
 )
 (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2011/01/03 v2.1 e-TeX tools for LaTeX
-\etb@tempcnta=\count190
+\etb@tempcnta=\count187
 )
 (./tesis-enumeracion.sty)
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
-\lst@mode=\count191
+\lst@mode=\count188
 \lst@gtempboxa=\box63
 \lst@token=\toks47
-\lst@length=\count192
+\lst@length=\count189
 \lst@currlwidth=\dimen191
-\lst@column=\count193
-\lst@pos=\count194
+\lst@column=\count190
+\lst@pos=\count191
 \lst@lostspace=\dimen192
 \lst@width=\dimen193
-\lst@newlines=\count195
-\lst@lineno=\count196
+\lst@newlines=\count192
+\lst@lineno=\count193
 \lst@maxwidth=\dimen194
 
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
-\c@lstnumber=\count197
-\lst@skipnumbers=\count198
+\c@lstnumber=\count194
+\lst@skipnumbers=\count195
 \lst@framebox=\box64
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
@@ -1136,7 +1131,7 @@ Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 \minrowclearance=\skip138
 )
 LaTeX Info: Redefining \color on input line 702.
-\rownum=\count199
+\rownum=\count196
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
 Package xcolor Info: Model `RGB' extended on input line 1353.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
@@ -1151,17 +1146,17 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip139
 \bibsep=\skip140
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count200
+\c@NAT@ctr=\count197
 )
 (/usr/share/texlive/texmf-dist/tex/latex/babelbib/babelbib.sty
 Package: babelbib 2012/01/03 v1.31 babelbib: multilingual bibliographies (HH)
-\c@btxromaniannumeral=\count201
+\c@btxromaniannumeral=\count198
 )
+\c@teorema=\count199
+\c@ejemplo=\count200
+\c@definicion=\count201
 Normal \count register pool exhausted, switching to extended pool.
-\c@teorema=\count277
-\c@ejemplo=\count278
-\c@definicion=\count279
-\c@lema=\count280
+\c@lema=\count277
 
 (/usr/share/texlive/texmf-dist/tex/latex/titlesec/titlesec.sty
 Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
@@ -1177,9 +1172,9 @@ Package: titlesec 2011/12/15 v2.10.0 Sectioning titles
 )
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
-\Gm@cnth=\count281
-\Gm@cntv=\count282
-\c@Gm@tempcnt=\count283
+\Gm@cnth=\count278
+\Gm@cntv=\count279
+\c@Gm@tempcnt=\count280
 \Gm@bindingoffset=\dimen200
 \Gm@wd@mp=\dimen201
 Normal \dimen register pool exhausted, switching to extended pool.
@@ -1191,10 +1186,10 @@ Normal \dimen register pool exhausted, switching to extended pool.
 \Gm@layoutvoffset=\dimen261
 \Gm@dimlist=\toks50
 )
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 421.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 421.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 424.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 424.
 
-Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 421
+Package hyperref Info: Option `pdfdisplaydoctitle' set `true' on input line 424
 .
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/se-ascii-print.def
@@ -1203,13 +1198,10 @@ File: se-ascii-print.def 2011/12/02 v1.10 stringenc: Printable ASCII characters
 )
 
 Package hyperref Warning: pdfproducer: xdvipdfmx will use its own setting
-(hyperref)                instead of the value given on input line 421.
+(hyperref)                instead of the value given on input line 424.
 
-Package hyperref Info: Option `colorlinks' set `true' on input line 421.
-) (./tesis-usach.aux (./preliminares/cubierta.aux)
-(./preliminares/dedicatoria.aux) (./preliminares/agradecimiento.aux)
-(./preliminares/abstract.aux) (./chapters/1-Introduccion.aux)
-(./chapters/2-Cuerpo.aux) (./chapters/3-Conclusiones.aux) (./anexos/Anexo-1.aux
+Package hyperref Info: Option `colorlinks' set `true' on input line 424.
+) (./tesis-usach.aux (./preliminares/cubierta.aux) (./preliminares/abstract.aux
 ))
 \openout1 = `tesis-usach.aux'.
 
@@ -1330,7 +1322,7 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count284
+\c@section@level=\count281
 )
 LaTeX Info: Redefining \ref on input line 4.
 LaTeX Info: Redefining \pageref on input line 4.
@@ -1340,7 +1332,7 @@ LaTeX Info: Redefining \nameref on input line 4.
 \@outlinefile=\write6
 \openout6 = `tesis-usach.out'.
 
-\c@lstlisting=\count285
+\c@lstlisting=\count282
 
 babelbib: Use citation-dependent languages in bibliography
 babelbib: Set bibliography fall-back language to english
@@ -1461,126 +1453,138 @@ LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 20.
 
 (/usr/share/texlive/texmf-dist/tex/latex/euenc/eu1lmtt.fd
 File: eu1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-) [2
-
-
-]
-\openout2 = `preliminares/dedicatoria.aux'.
-
-
-(./preliminares/dedicatoria.tex) [3
-
-]
-\openout2 = `preliminares/agradecimiento.aux'.
-
- (./preliminares/agradecimiento.tex)
-[4
-
+) [0
 
 
 ]
 \openout2 = `preliminares/abstract.aux'.
 
- (./preliminares/abstract.tex [1
 
+(./preliminares/abstract.tex
+Underfull \hbox (badness 1221) in paragraph at lines 8--8
+[]\EU1/Arial(0)/m/n/10 Contrariamente a la creencia popular, Lorem Ipsum no es 
+simplemente texto
+ []
+
+[1
 
 
 ]) [2
+
+] (./preliminares/dedicatoria.tex) (./preliminares/agradecimiento.tex
+[3
+
+]) [4
 
 ] (./tesis-usach.toc)
 \tf@toc=\write7
 \openout7 = `tesis-usach.toc'.
 
- [3
+ [5
 
-
-]
-(./tesis-usach.lot)
+] (./tesis-usach.lot)
 \tf@lot=\write8
 \openout8 = `tesis-usach.lot'.
 
- [4
+ [6
 
 ] (./tesis-usach.lof)
 \tf@lof=\write9
 \openout9 = `tesis-usach.lof'.
 
- [5
+
+[7
 
 ] (./tesis-usach.loa)
 \tf@loa=\write10
 \openout10 = `tesis-usach.loa'.
 
- [6
+ [8
 
-]
-\openout2 = `chapters/1-Introduccion.aux'.
-
-
-(./chapters/1-Introduccion.tex
+] (./chapters/1-Introduccion.tex
 Cap\'itulo 1.
 [1
 
 
-
-] [2]) [3]
-\openout2 = `chapters/2-Cuerpo.aux'.
-
- (./chapters/2-Cuerpo.tex
+] [2]) (./chapters/2-Cuerpo.tex [3]
 Cap\'itulo 2.
+
+Underfull \hbox (badness 1092) in paragraph at lines 6--7
+[]\EU1/Arial(0)/m/n/10 Participación y fuerte apoyo del DIINF a la organización
+ del World Computer
+ []
+
 File: images/Ejemplo.png Graphic file (type QTm)
 <use  "images/Ejemplo.png" > [4
 
-
-
 ]
-Overfull \hbox (15.0pt too wide) detected at line 56
+Overfull \hbox (15.0pt too wide) detected at line 58
 [][] 
  []
 
-) [5]
-\openout2 = `chapters/3-Conclusiones.aux'.
-
- (./chapters/3-Conclusiones.tex
+) (./chapters/3-Conclusiones.tex [5]
 Cap\'itulo 3.
 ) [6
 
+] (./finales/Glosario.tex) [7
 
 
-] (./tesis-usach.bbl) [7
+] (./tesis-usach.bbl
+Underfull \hbox (badness 10000) in paragraph at lines 13--19
+[]\EU1/Arial(0)/m/n/10 Delgado, F. (2016).  \EU1/Arial(0)/m/it/10 Piñera es el 
+presidenciable con más exposición en la
+ []
 
 
-]
-\openout2 = `anexos/Anexo-1.aux'.
+Underfull \hbox (badness 10000) in paragraph at lines 13--19
+\EU1/Arial(0)/m/it/10 prensa según investigación Usach \EU1/Arial(0)/m/n/10 .  
+Recuperado el Martes 29 de Julio de
+ []
 
- (./anexos/Anexo-1.tex
-Anexo A.
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--19
+\EU1/Arial(0)/m/n/10 2016, de [][]$[][][][] [] [] [] [][][] [] [][][][][][][][]
+[][][] [] [][] [] [][][][][][][][] [] [][][][][][][][] [] [][][][][][][][] [] [
+][][][] [] [][] [] [][] []
+ []
+
+
+Overfull \hbox (0.8979pt too wide) in paragraph at lines 13--19
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][]
+[][][][][][][][][][][]$[][]
+ []
+
 ) [8
 
 
+] (./finales/Anexo-1.tex
+Anexo A.
+) [9
+
+
+] (./finales/Apendice-1.tex
+Ap\'endice A.
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 76.
+ [10
+
+
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 59.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 59.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 76.
  (./tesis-usach.aux (./preliminares/cubierta.aux)
-(./preliminares/dedicatoria.aux) (./preliminares/agradecimiento.aux)
-(./preliminares/abstract.aux) (./chapters/1-Introduccion.aux)
-(./chapters/2-Cuerpo.aux) (./chapters/3-Conclusiones.aux) (./anexos/Anexo-1.aux
-))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 59.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 59.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 59.
+(./preliminares/abstract.aux))
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 76.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 76.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 76.
  ) 
 Here is how much of TeX's memory you used:
- 30145 strings out of 493918
- 514830 string characters out of 6150563
- 627764 words of memory out of 5000000
- 32971 multiletter control sequences out of 15000+600000
+ 30046 strings out of 493918
+ 513129 string characters out of 6150563
+ 621672 words of memory out of 5000000
+ 32890 multiletter control sequences out of 15000+600000
  8940 words of font info for 53 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 53i,11n,51p,10407b,685s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,11n,48p,10407b,687s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on tesis-usach.pdf (18 pages).
+Output written on tesis-usach.pdf (20 pages).

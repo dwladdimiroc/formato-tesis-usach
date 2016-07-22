@@ -1,0 +1,15 @@
+\makeatletter
+	\newcommand\anexo{\par
+	\setcounter{chapter}{0}%
+	\setcounter{section}{0}%
+	\def\@chapapp{\anexoname}%
+	\def\thechapter{\@Alph\c@chapter}}
+\makeatother
+
+\makeatletter
+	\newcommand\apendice{\par
+	\setcounter{chapter}{0}%
+	\setcounter{section}{0}%
+	\def\@chapapp{\apendicename}%
+	\def\thechapter{\@Alph\c@chapter}}
+\makeatother

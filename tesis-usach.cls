@@ -81,8 +81,8 @@
 \RequirePackage{longtable}	% Para cortar tablas grandes
 \RequirePackage{lscape}
 
-% Anexos
-\RequirePackage{appendix}
+% Anexos y Apéndice
+\RequirePackage{tesis-finales}
 
 % Tabla de contenidos
 \RequirePackage[nottoc,notlot,notlof,notbib]{tocbibind}
@@ -230,7 +230,6 @@
     \vrule height0.75em width0.5em depth0.25em\fi
 }
 
-
 % Notaciones Generales
 \newcommand{\textrev}[1]{\textbf{#1}}
 \newcommand{\emphrule}[1]{\emph{#1}}
@@ -279,9 +278,8 @@
 
 \renewcommand{\bibname}{Referencias bibliogr\'aficas}
 
-\renewcommand{\appendixname}{Anexo}
-\renewcommand{\appendixtocname}{Anexos}
-\renewcommand{\appendixpagename}{Anexo}
+\newcommand{\anexoname}{Anexo}
+\newcommand{\apendicename}{Ap\'endice}
 
 \renewcommand{\tablename}{Tabla}
 \renewcommand{\figurename}{Figura}
@@ -506,7 +504,7 @@
 		\vfill\par
         \begin{flushleft}
 			\copyright\ 
-			\@autor \; - \@annoexamen \\ 
+			\@autor \;, \@annoexamen \\ 
 			\includegraphics[height=12pt]{images/licences/cc_by.png}
 				~$\bullet$~~ Algunos derechos reservados. Esta obra est\'a bajo una Licencia Creative Commons Atribuci\'on-Chile 3.0. Sus condiciones de uso pueden ser revisadas en: \url{http://creativecommons.org/licenses/by/3.0/cl/}.      
         \end{flushleft}
@@ -557,9 +555,7 @@
 % Glosario
 \newenvironment{glosario}
 {
-    \begin{center}
-        \textbf{\Large GLOSARIO}
-    \end{center}
+	\chapter*{GLOSARIO}
 }{}
 
 \endinput
