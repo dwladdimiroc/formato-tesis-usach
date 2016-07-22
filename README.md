@@ -7,6 +7,7 @@ El proyecto contiene los siguientes archivos:
 * `apa-good.bst`: Estilo de la cita APA
 * `bibliografia.bib`: Archivo para agregar la información de las citas a realizar
 * `tesis-enumeracion.sty`: Archivo para la enumeración de la tesis
+* `tesis-finales.sty`: Archivo para el formato de los anexos y apéndices
 * `tesis-usach.cls`: Estilo modificado de book.cls, el cual posee el formato de tesis según lo indicado por el manual de tesis Usach 2014
 * `tesis-usach.tex`: Archivo principal, en el cual deben agregarse las distintas partes de la tesis
 
