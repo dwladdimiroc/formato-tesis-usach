@@ -5,8 +5,10 @@
 
 \newif\ifkeys\keysfalse
 \newif\ifpropuesta\propuestafalse
+\newif\ifcoguia\coguiafalse
 \DeclareOption{keys}{\keystrue}
 \DeclareOption{propuesta}{\propuestatrue}
+\DeclareOption{coguia}{\coguiatrue}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions\relax
 
@@ -472,8 +474,12 @@
 			\vspace*{2.5cm}
 			\begin{flushleft}
 				{\normalsize \hspace{7cm} Profesor gu\'ia: \@profesorguia}\\
-				{\normalsize \hspace{7cm} Profesor co-gu\'ia: \@profesorcoguia}\\
-				\vspace{1cm}
+				\ifcoguia
+					{\normalsize \hspace{7cm} Profesor co-gu\'ia: \@profesorcoguia}\\
+					\vspace{1cm}
+				\else
+					\vspace{1cm}
+				\fi
 				\hspace{6.8cm}
 				{\normalsize
 				\begin{tabular}{p{5.5cm}}
@@ -514,7 +520,6 @@
 % Dedicatoria
 \newenvironment{dedicatoria}[1]
 {
-	\thispagestyle{empty}
     \vspace*{17cm}\par
     \hspace*{5cm}
     \begin{flushright}
@@ -526,7 +531,7 @@
 \newenvironment{agradecimiento}
 {
     \chapter*{\centerline{AGRADECIMIENTOS}}
-}{\thispagestyle{empty}}
+}{}
 
 % Resumen
 \newcommand{\KeywordsES}[1]
