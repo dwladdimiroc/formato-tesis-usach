@@ -13,4 +13,4 @@ El proyecto contiene los siguientes archivos:
 
 Nota: Para la compilación del archivo se debe utilizar Xelatex.
 
-En caso de usar el editor online ShareLaTeX se debe comentar las líneas 17 y 18 del archivo `tesis-usach.cls` y descomentar las líneas 21, 22 y 23.
+En caso de usar el editor online Overleaf se debe comentar las líneas 17 y 18 del archivo `tesis-usach.cls` y descomentar las líneas 21, 22 y 23.
