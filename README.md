@@ -134,7 +134,21 @@ Compilar con **XeLaTeX** o **pdfLaTeX** según el menú del proyecto; la clase e
 
 ## Integración continua (GitHub Actions)
 
-El workflow `[.github/workflows/build-pdf.yml](.github/workflows/build-pdf.yml)` compila con **latexmk** en dos variantes (**XeLaTeX** y **pdfLaTeX**), sube cada `tesis-usach.pdf` como artefacto y funciona como **prueba de regresión** del repositorio.
+El workflow [`.github/workflows/build-pdf.yml`](.github/workflows/build-pdf.yml) compila con **latexmk** en dos variantes (**XeLaTeX** y **pdfLaTeX**), sube cada PDF como **artefacto del run** (temporal, ideal para PR y depuración) y, además, al **empujar un tag de versión** `v*` (p. ej. `v1.0.0`), crea una [**GitHub Release**](https://docs.github.com/en/repositories/releasing-projects-on-github) con dos adjuntos permanentes:
+
+- `tesis-usach-xelatex.pdf`
+- `tesis-usach-pdflatex.pdf`
+
+Pasos típicos para publicar una versión de la plantilla:
+
+```bash
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+No hace falta crear la release a mano en la web: el último paso del workflow usa [softprops/action-gh-release](https://github.com/softprops/action-gh-release) con `generate_release_notes`. Los permisos `contents: write` del job `release` aplican solo a ese job (el token del repositorio debe poder crear releases en ese mismo repo).
+
+Los artefactos de cada ejecución (sin tag) siguen siendo **descargables solo desde la pestaña Actions** y caducan según la política de GitHub; los PDF en Releases permanecen hasta que borres la release o los activos.
 
 Tras habilitar Actions en tu fork o repositorio:
 
@@ -154,4 +168,8 @@ Opciones relevantes: `coguia` (muestra co-guía), `propuesta` (formato de propue
 
 ## Licencia y créditos
 
-Plantilla desarrollada en el ámbito USACH; los autores originales están acreditados al inicio de `tesis-usach.cls`. Revisa las condiciones de uso y la licencia de los materiales que incorpores (logo institución, imágenes, etc.).
+Plantilla de formato desarrollada en la Universidad de Santiago de Chile. El archivo `tesis-usach.cls` agradece explícitamente la labor de quienes participaron en esta versión estandarizada:
+
+Emir Muñoz, Rodrigo Campos, Hugo Meneses, Víctor Flores, Miguel Cárcamo, Pablo González y Daniel Wladdimiro.
+
+Revisa las condiciones de uso y la licencia de los materiales que incorpores (logo institución, imágenes, íconos Creative Commons, etc.).
