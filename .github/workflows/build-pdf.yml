@@ -1,0 +1,39 @@
+# Verifica que el documento compile en XeLaTeX y pdfLaTeX (latexmk + BibTeX).
+# TeX Live fijado para builds reproducibles entre estudiantes y CI (actualizar año tras upgrades mayores).
+name: Compilar PDF (LaTeX)
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+
+jobs:
+  build:
+    name: ${{ matrix.engine }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - engine: xelatex
+            latexmk_use_xelatex: true
+          - engine: pdflatex
+            latexmk_use_xelatex: false
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Compilar con latexmk
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: tesis-usach.tex
+          # Alineado con README y entornos de aula (misma cohort mayor de TeX Live).
+          texlive_version: "2025"
+          latexmk_use_xelatex: ${{ matrix.latexmk_use_xelatex }}
+
+      - name: Subir PDF (artefacto)
+        uses: actions/upload-artifact@v4
+        with:
+          name: tesis-usach-${{ matrix.engine }}
+          path: tesis-usach.pdf

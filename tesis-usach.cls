@@ -15,14 +15,22 @@
 % Letra tamaño 10pt, hoja carta
 \LoadClass[10pt,oneside,letterpaper]{book}
 
-% Letra Arial
-\usepackage{fontspec}
-\setmainfont{Arial}
-
-% Letra Arial ShareLatex
-%\usepackage[T1]{fontenc}
-%\usepackage{helvet}
-%\renewcommand{\familydefault}{\sfdefault}
+% Motor: XeLaTeX/LuaLaTeX usa Arial real; pdfLaTeX usa Helvetica (equivalente práctico a Arial).
+\RequirePackage{iftex}
+\ifPDFTeX
+	\RequirePackage[T1]{fontenc}
+	\RequirePackage[utf8]{inputenc}
+	\RequirePackage{helvet}
+	\renewcommand{\familydefault}{\sfdefault}
+\else
+	\RequirePackage{fontspec}
+	% Arial si está instalada (recomendado en máquinas locales); en CI suele faltar—usar equivalente TeX.
+	\IfFontExistsTF{Arial}{%
+		\setmainfont{Arial}%
+	}{%
+		\setmainfont{TeX Gyre Heros}%
+	}
+\fi
 
 % Interlineado de 1.5:
 \renewcommand{\baselinestretch}{1.5}
@@ -31,7 +39,7 @@
 
 % Archivos suplementarios
 \RequirePackage[english]{babel}
-\RequirePackage{inputenc}
+% inputenc solo en pdfTeX (véase bloque de fuentes arriba); XeLaTeX/LuaLaTeX: UTF-8 vía fontspec
 \ifkeys\RequirePackage[notref,notcite]{showkeys}\fi
 
 % Configuración de header y footer
@@ -357,8 +365,12 @@
 \newcommand{\cref}[1]{(\ref{#1})}
 % Referenciacion en la forma:  (1)-(5)
 \newcommand{\clref}[2]{(\ref{#1})--(\ref{#2})}
-% Otras referencias
-\newcommand{\Ref}[1]{Ref.\ \cite{#1}}
+% Otras referencias (\Ref puede existir por hyperref u otros paquetes)
+\@ifundefined{Ref}{%
+	\newcommand{\Ref}[1]{Ref.\ \cite{#1}}%
+}{%
+	\renewcommand{\Ref}[1]{Ref.\ \cite{#1}}%
+}
 \newcommand{\dRef}[2]{Refs.\ \cite{#1},\cite{#2}}
 
 % Comandos Matemáticos
