@@ -1,0 +1,22 @@
+# LaTeX / BibTeX
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.loa
+*.lof
+*.log
+*.lot
+*.out
+*.synctex.gz
+*.toc
+*.xdv
+
+# Por capítulo / preliminares
+preliminares/*.aux
+chapters/*.aux
+finales/*.aux
+
+# PDF generado (compila con `make` o Actions)
+*.pdf

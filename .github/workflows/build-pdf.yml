@@ -1,0 +1,80 @@
+# Verifica que el documento compile en XeLaTeX y pdfLaTeX (latexmk + BibTeX).
+# Con tag v* (p. ej. v1.0.0): adjunta ambos PDF en una GitHub Release.
+# TeX Live fijado para builds reproducibles entre estudiantes y CI (actualizar año tras upgrades mayores).
+name: Compilar PDF (LaTeX)
+
+on:
+  push:
+    branches: [main, master]
+    tags: ["v*"]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: ${{ matrix.engine }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - engine: xelatex
+            latexmk_use_xelatex: true
+          - engine: pdflatex
+            latexmk_use_xelatex: false
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Compilar con latexmk
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: tesis-usach.tex
+          # Alineado con README y entornos de aula (misma cohort mayor de TeX Live).
+          texlive_version: "2025"
+          latexmk_use_xelatex: ${{ matrix.latexmk_use_xelatex }}
+
+      - name: Subir PDF (artefacto)
+        uses: actions/upload-artifact@v4
+        with:
+          name: tesis-usach-${{ matrix.engine }}
+          path: tesis-usach.pdf
+
+  release:
+    name: Publicar release con PDFs
+    if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/v')
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Descargar PDF XeLaTeX
+        uses: actions/download-artifact@v4
+        with:
+          name: tesis-usach-xelatex
+          path: artifacts/xelatex
+
+      - name: Descargar PDF pdfLaTeX
+        uses: actions/download-artifact@v4
+        with:
+          name: tesis-usach-pdflatex
+          path: artifacts/pdflatex
+
+      - name: Preparar adjuntos
+        run: |
+          cp artifacts/xelatex/tesis-usach.pdf tesis-usach-xelatex.pdf
+          cp artifacts/pdflatex/tesis-usach.pdf tesis-usach-pdflatex.pdf
+
+      - name: Crear GitHub Release y adjuntar PDFs
+        uses: softprops/action-gh-release@v2
+        with:
+          generate_release_notes: true
+          files: |
+            tesis-usach-xelatex.pdf
+            tesis-usach-pdflatex.pdf
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
